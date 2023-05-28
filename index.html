@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Math for kids</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ff5f6d">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff5f6d">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__inner">
+                <div class="logo header__logo">
+                    <img src="images/svg/logo.svg" alt="" class="logo__img" width="50">
+                    <span class="logo__text">Math for kids</span>
+                </div>
+                <div class="header__actions">
+                    <div class="language header__language">
+                        <img src="images/svg/planet.svg" alt="" class="language__img" width="30">
+                        <select class="language__list">
+                            <option value="ru" class="language__item">Русский</option>
+                            <option value="en" class="language__item">English</option>
+                        </select>
+                    </div>
+                    <button class="button-play header__button button-play--modal lang-header__button" type="button">Играть</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="wrapper">
+            <section class="intro">
+                <div class="intro__content">
+                    <h1 class="intro__title lang-intro__title">
+                        Научитесь считать с помощью игры
+                    </h1>
+                    <p class="intro__desc lang-intro__desc">
+                        Math for kids - это приложение, для обучения детей простым
+                        арифметическим операциям
+                    </p>
+                    <button class="button-play intro__button button-play--modal lang-intro__button" type="button">Играть</button>
+                </div>
+                <div class="intro__image-box">
+                    <img src="./images/intro/kids.png" alt="" class="intro__img">
+                </div>
+            </section>
+
+            <section class="advantages">
+                <h2 class="title advantages__title lang-advantages__title">Наши преимущества</h2>
+                <div class="advantages__buttons">
+                    <button class="advantages__btn active  lang-advantages__btn1" onclick="currentAdvatange(1)">  </button>
+                    <button class="advantages__btn lang-advantages__btn2" onclick="currentAdvatange(2)"> </button>
+                    <button class="advantages__btn lang-advantages__btn3" onclick="currentAdvatange(3)">  </button>
+                </div>
+                <div class="section-box advantages__box">
+                    <div class="advantages__items">
+                        <div class="advantages__item active">
+                            <div class="advantages__content">
+                                <h3 class="advantages__subtitle lang-advantages__subtitle1">Обучение основанное на игровом процессе</h3>
+                                <p class="advantages__text lang-advantages__text1">
+                                    Благодаря нашему подходу учащиеся учатся во время 
+                                    игры, способствуя активному обучению и установке на рост.
+                                </p>
+                            </div>
+                            <div class="advantages__image-box">
+                                <img src="./images/advatanges/photo1.jpg" alt="" class="advantages__img">
+                            </div>
+                        </div>
+                        <div class="advantages__item ">
+                            <div class="advantages__content">
+                                <h3 class="advantages__subtitle lang-advantages__subtitle2">Арифметический тренажер</h3>
+                                <p class="advantages__text lang-advantages__text2">
+                                    В приложении несколько типов заданий и уровней — так что у ребенка всегда есть 
+                                    выбор и возможность переключиться на что-то новенькое и более сложное. Приложение может 
+                                    стать для ребенка хорошей тренировкой базовых арифметических навыков.
+                                </p>
+                            </div>
+                            <div class="advantages__image-box">
+                                <img src="./images/advatanges/photo2.jpg" alt="" class="advantages__img">
+                            </div>
+                        </div>
+                        <div class="advantages__item">
+                            <div class="advantages__content">
+                                <h3 class="advantages__subtitle lang-advantages__subtitle3">Влияние на учеников</h3>
+                                <p class="advantages__text lang-advantages__text3">
+                                    Наш продукт может помочь миллионам детей получить 
+                                    удовольствие от изучения математики. Мы помогаем всем 
+                                    детям, независимо от возраста, помогая им найти свой путь к 
+                                    изучению математики.
+                                </p>
+                            </div>
+                            <div class="advantages__image-box">
+                                <img src="./images/advatanges/photo3.jpg" alt="" class="advantages__img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dots advantages__dots">
+                        <span class="dot advantages--dot active" onclick="currentAdvatange(1)"></span>
+                        <span class="dot advantages--dot" onclick="currentAdvatange(2)"></span>
+                        <span class="dot advantages--dot" onclick="currentAdvatange(3)"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="manual">
+                <h2 class="title manual__title lang-manual__title">Как пользоваться приложением?</h2>
+               <div class="manual__items">
+                    <div class="manual__item">
+                        <div class="manual__image-box">
+                            <img src="images/svg/interface.svg" alt="" class="manual__img">
+                        </div>
+                        <h3 class="manual__item-title lang-manual__item-title1">Интерфейс</h3>
+                        <div class="manual__text lang-manual__text1">
+                            Для начала перейдите на страницу <a href="add easy.html" class="manual__link">приложения</a>.
+                            Вы увидите оно состоит из 3 частей, а именно: область шапки, область уравнения и область
+                            ответов на это уравнение.
+                        </div>
+                    </div>
+                    <div class="manual__item">
+                        <div class="manual__image-box">
+                            <img src="images/svg/book.svg" alt="" class="manual__img">
+                        </div>
+                        <h3 class="manual__item-title lang-manual__item-title2">Уравнение и ответы</h3>
+                        <div class="manual__text lang-manual__text2">
+                            Случайным образом генерируется уравнение и 3 варианта ответа данное уравнение. Верный ответ
+                            всегда один и при наведении на ответ вы увидите, как он подсвечивается, благодаря чему 
+                            вы не запутаетесь в вариантах ответа. Для выбора ответа просто нажмите по нему.
+                        </div>
+                    </div>
+                    <div class="manual__item">
+                        <div class="manual__image-box">
+                            <img src="images/svg/settings.svg" alt="" class="manual__img">
+                        </div>
+                        <h3 class="manual__item-title lang-manual__item-title3">Генерация уравнения</h3>
+                        <div class="manual__text lang-manual__text3">
+                           В случае если на предыдущее уравнение был дан верный ответ, генерируется новое уравнение
+                           с соотвествующими вариантами ответа. Если ответ был не верным, уравнение не сменяется
+                           до тех пор, пока не будет дан правильный ответ.
+                        </div>
+                    </div>
+                    <div class="manual__item">
+                        <div class="manual__image-box">
+                            <img src="images/svg/list.svg" alt="" class="manual__img">
+                        </div>
+                        <h3 class="manual__item-title lang-manual__item-title4">Выбор ответа</h3>
+                        <div class="manual__text lang-manual__text4">
+                            При верном выборе ответа область уравнения подсвечивается зеленым цветом, но 
+                            в случае неправильного ответа - красным и воспроизводится
+                            звук, сигнализирующий об ошибке.
+                        </div>
+                    </div>
+                    <div class="manual__item">
+                        <div class="manual__image-box">
+                            <img src="images/svg/levels.svg" alt="" class="manual__img">
+                        </div>
+                        <h3 class="manual__item-title lang-manual__item-title5">Уровни</h3>
+                        <div class="manual__text lang-manual__text5">
+                            Существует 3 уровня сложности: простой, средний и сложный. В простом уровне  2 маленьких
+                            числа и 1 оператор (например, деление). В среднем  2 больших числа и 1 оператор. В сложном
+                             3 больших числа и 2 одинаковых оператора. 
+                        </div>
+                    </div>
+                    <div class="manual__item">
+                        <div class="manual__image-box">
+                            <img src="images/svg/episodes.svg" alt="" class="manual__img">
+                        </div>
+                        <h3 class="manual__item-title lang-manual__item-title6">Операторы</h3>
+                        <div class="manual__text lang-manual__text6">
+                            Существует 4 вида операторов: сложение, вычитание, умножение и деление. Для каждого из них
+                            есть все 3 уровня сложности.
+                        </div>
+                    </div>
+                    <div class="manual__item ">
+                        <div class="manual__image-box">
+                            <img src="images/svg/reset app.svg.svg" alt="" class="manual__img">
+                        </div>
+                        <h3 class="manual__item-title lang-manual__item-title7">Кнопка "Заново"</h3>
+                        <div class="manual__text lang-manual__text7">
+                            По необходимости вы можете вручную сгенерировать другое уравнение, нажав кнопку "Заново"
+                            в правом верхнем углу области уравнения
+                        </div>
+                    </div>
+                    <div class="manual__item ">
+                        <div class="manual__image-box">
+                            <img src="images/svg/grab.svg" alt="" class="manual__img">
+                        </div>
+                        <h3 class="manual__item-title lang-manual__item-title8">Быстрый выбор</h3>
+                        <div class="manual__text lang-manual__text8">
+                            В верхней части приложения находятся ссылки на другие операторы и уровни, к которым вы
+                            можете перейти сначала наведя на нужный оператор, а затем нажав на ссылку из появившегося
+                            окна.
+                        </div>
+                    </div>
+                    <div class="manual__item ">
+                        <div class="manual__image-box">
+                            <img src="images/svg/home.svg" alt="" class="manual__img">
+                        </div>
+                        <h3 class="manual__item-title lang-manual__item-title9">Главная страница</h3>
+                        <div class="manual__text lang-manual__text9">
+                            Вы всегда можете вернуться на главную страницу сайта, нажав на наш логотип или название
+                            в верхнем левом углу приложения.
+                        </div>
+                    </div>
+               </div> 
+                
+            </section>
+
+            <section class="reviews">
+                <h2 class="title reviews__title lang-reviews__title">Отзывы пользователей</h2>
+                <div class="section-box reviews__box">
+                    <div class="reviews__items">
+                        <div class="reviews__item active">
+                            <div class="reviews__image-box">
+                                <img src="./images/reviews/photo1.jpg" alt="" class="reviews__img">
+                            </div>
+                            <div class="reviews__text">
+                                <div class="reviews__content">
+                                    <p class="reviews__comment lang-reviews__comment1">
+                                        Я всегда хотела, чтобы мои дети могли учиться не только благодаря 
+                                        традиционным методам, но и с помощью игры. Это дает им отличную отправную точку.
+                                    </p>
+                                    <p class="reviews__author lang-reviews__author1">
+                                        Юлия Иванова, родитель
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__item ">
+                            <div class="reviews__image-box">
+                                <img src="./images/reviews/photo2.jpg" alt="" class="reviews__img">
+                            </div>
+                            <div class="reviews__text">
+                                <div class="reviews__content">
+                                    <p class="reviews__comment lang-reviews__comment2">
+                                        Назовите любую онлайн программу, я попробовала её. Ни один из них не лучше Math for kids. 
+                                        Любой учитель, который хочет, чтобы их ученики научились считать, получая удовольствие 
+                                        ... начните здесь!
+                                    </p>
+                                    <p class="reviews__author lang-reviews__author2">
+                                        Маргарита Полетаева, учитель начальных классов
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__item ">
+                            <div class="reviews__image-box">
+                                <img src="./images/reviews/photo3.jpg" alt="" class="reviews__img" >
+                            </div>
+                            <div class="reviews__text">
+                                <div class="reviews__content">
+                                    <p class="reviews__comment lang-reviews__comment3">
+                                        Ходить на занятия в школу очень скучно, но если в школе были бы такие игры, было бы 
+                                        гораздо интереснее! Мне очень нравится.
+                                    </p>
+                                    <p class="reviews__author lang-reviews__author3">
+                                        Татьяна Сергеева, 1-ый класс
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dots reviews--dots">
+                        <span class="dot reviews--dot active" onclick="currentReviews(1)"></span>
+                        <span class="dot reviews--dot" onclick="currentReviews(2)"></span>
+                        <span class="dot reviews--dot" onclick="currentReviews(3)"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="choose">
+                <h2 class="title choose__title lang-choose__title">Хочешь поиграть?</h2>
+                <div class="choose__content">
+                    <div class="choose__item">
+                        <h3 class="choose__subtitle lang-choose__subtitle1">Выбери действие</h3>
+                        <div class="choose__variants" name="action">
+                            <div class="choose__variant">
+                                <input type="radio" class="choose__field" id="add" name="action" value="add">
+                                <label for="add" class="choose__label lang-choose__label1">Сложение</label>
+                            </div>
+                            <div class="choose__variant">
+                                <input type="radio" class="choose__field" id="sub" name="action" value="sub">
+                                <label for="sub" class="choose__label lang-choose__label2">Вычитание</label>
+                            </div>
+                            <div class="choose__variant">
+                                <input type="radio" class="choose__field" id="mul" name="action" value="mul">
+                                <label for="mul" class="choose__label lang-choose__label3">Умножение</label>
+                            </div>
+                            <div class="choose__variant">
+                                <input type="radio" class="choose__field" id="div" name="action" value="div">
+                                <label for="div" class="choose__label lang-choose__label4">Деление</label>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="choose__line"></span>
+                    <div class="choose__item">
+                        <h3 class="choose__subtitle lang-choose__subtitle2">Выбери сложность</h3>
+                        <div class="choose__variants" name="complexity">
+                            <div class="choose__variant">
+                                <input type="radio" class="choose__field" id="easy" name="complexity" value="easy">
+                                <label for="easy" class="choose__label lang-choose__label5">Простой</label>
+                            </div>
+                            <div class="choose__variant">
+                                <input type="radio" class="choose__field" id="middle" name="complexity" value="middle">
+                                <label for="middle" class="choose__label lang-choose__label6">Средний</label>
+                            </div>
+                            <div class="choose__variant">
+                                <input type="radio" class="choose__field" id="hard" name="complexity" value="hard">
+                                <label for="hard" class="choose__label lang-choose__label7">Сложный</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose__button-box">
+                    <button type="button" class="button-play choose__button lang-choose__button">Играть</button>
+                </div>
+            </section>
+            
+            <div class="modal" id="modal">
+                <div class="modal__content">
+                    <div class="close"></div>
+                    <h2 class="title choose__title choose__title--modal  lang-choose__title--modal ">Хочешь поиграть?</h2>
+                    <span class="choose__line choose__line--long choose__line--long--modal"></span>
+                    <div class="choose__content choose__content--modal">
+                        <div class="choose__item choose__item--modal">
+                            <h3 class="choose__subtitle choose__subtitle--modal  lang-choose__subtitle--modal1">Выбери действие</h3>
+                            <div class="choose__variants choose__variants--modal">
+                                <div class="choose__variant">
+                                    <input type="radio" class="choose__field" id="add2" name="action" value="add">
+                                    <label for="add2" class="choose__label lang-choose__label--modal1">Сложение</label>
+                                </div>
+                                <div class="choose__variant">
+                                    <input type="radio" class="choose__field" id="sub2" name="action" value="sub">
+                                    <label for="sub2" class="choose__label lang-choose__label--modal2">Вычитание</label>
+                                </div>
+                                <div class="choose__variant">
+                                    <input type="radio" class="choose__field" id="mul2" name="action" value="mul">
+                                    <label for="mul2" class="choose__label lang-choose__label--modal3">Умножение</label>
+                                </div>
+                                <div class="choose__variant">
+                                    <input type="radio" class="choose__field" id="div2" name="action" value="div">
+                                    <label for="div2" class="choose__label lang-choose__label--modal4">Деление</label>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="choose__line choose__line--modal"></span>
+                        <div class="choose__item choose__item--modal">
+                            <h3 class="choose__subtitle choose__subtitle--modal  lang-choose__subtitle--modal2">Выбери сложность</h3>
+                            <div class="choose__variants choose__variants--modal">
+                                <div class="choose__variant">
+                                    <input type="radio" class="choose__field" id="easy2" name="complexity" value="easy">
+                                    <label for="easy2" class="choose__label lang-choose__label--modal5">Простой</label>
+                                </div>
+                                <div class="choose__variant">
+                                    <input type="radio" class="choose__field" id="middle2" name="complexity" value="middle">
+                                    <label for="middle2" class="choose__label lang-choose__label--modal6">Средний</label>
+                                </div>
+                                <div class="choose__variant">
+                                    <input type="radio" class="choose__field" id="hard2" name="complexity" value="hard">
+                                    <label for="hard2" class="choose__label lang-choose__label--modal7">Сложный</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose__button-box">
+                        <button type="button" class="button-play choose__button choose__button--modal lang-choose__button--modal">Играть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__inner">
+                <div class="logo footer__logo">
+                    <img src="images/svg/logo.svg" alt="" class="logo__img" width="50">
+                    <span class="logo__text">Math for kids</span>
+                </div>
+                <div class="footer__contacts">
+                    <a href="mailto:artiom.kochkin@yandex.ru" class="footer__link footer__link--contacts" target="_blank">artiom.kochkin@yandex.ru</a>
+                    <a href="tel:+7(906)996-73-86" class="footer__link footer__link--contacts" target="_blank">+7(906)996-73-86</a>
+                </div>
+                <div class="footer__socials">
+                    <a href="https://vk.com/bastard300" class="footer__link" target="_blank">VK</a>
+                    <a href="https://www.instagram.com/artiom_kch/" class="footer__link" target="_blank">Instagram</a>
+                    <a href="https://github.com/ArtiomBastard" class="footer__link" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <span class="footer__copyright-text lang-footer__copyright-text">
+                    Copyright ©2023 Artiom Kochkin. All Rights Reserved.
+                </span>
+            </div>
+        </div>
+    </footer>
+<script src="scripts/script.js"></script>
+<script src="scripts/lang.js"></script>
+</body>
+</html>

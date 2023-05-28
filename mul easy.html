@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Умножение, простой уровень</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ff5f6d">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff5f6d">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+<link href="css/media.css" rel="stylesheet">
+</head>
+<body>
+<audio src="sounds/wrong.mp3" type="audio/mpeg"></audio>
+    <header class="header-app">
+        <div class="wrapper">
+            <div class="header-app__inner">
+                <a href="index.html" class="logo header-app__logo">
+                    <img src="images/svg/logo.svg" alt="" class="logo__img" width="50">
+                    <span class="logo__text">Math for kids</span>
+                </a>
+                <div class="operators header-app__operators">
+                    <div class="operators__item">
+                        <span class="operators__op ">Сложение</span>
+                        <div class="operators__list">
+                            <a href="add easy.html" class="operators__link">Простой</a>
+                            <a href="add middle.html" class="operators__link">Средний</a>
+                            <a href="add hard.html" class="operators__link">Сложный</a>
+                        </div>
+                    </div>
+                    <div class="operators__item">
+                        <span class="operators__op">Вычитание</span>
+                        <div class="operators__list">
+                            <a href="sub easy.html" class="operators__link">Простой</a>
+                            <a href="sub middle.html" class="operators__link">Средний</a>
+                            <a href="sub hard.html" class="operators__link">Сложный</a>
+                        </div>
+                    </div>
+                    <div class="operators__item">
+                        <span class="operators__op active">Умножение</span>
+                        <div class="operators__list">
+                            <a href="mul easy.html" class="operators__link">Простой</a>
+                            <a href="mul middle.html" class="operators__link">Средний</a>
+                            <a href="mul hard.html" class="operators__link">Сложный</a>
+                        </div>
+                    </div>
+                    <div class="operators__item">
+                        <span class="operators__op">Деление</span>
+                        <div class="operators__list">
+                            <a href="div easy.html" class="operators__link">Простой</a>
+                            <a href="div middle.html" class="operators__link">Средний</a>
+                            <a href="div hard.html" class="operators__link">Сложный</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <span class="menu__item"></span>
+                    <span class="menu__item"></span>
+                    <span class="menu__item"></span>
+                </div>
+                <div class="close-app"></div>
+            </div>
+        </div>
+    </header>
+    <div class="area">
+        <div class="equation area__equation">
+             
+            <div class="equation__reset">
+                <img src="images/svg/reset app.svg" alt="" class="equation__reset-img">
+            </div>
+            <div class="equation__num1">1</div>
+            <div class="equation__operator1">*</div>
+            <div class="equation__num2">2</div>
+            <div class="equation__equal">=</div>
+            <div class="equation__result">?</div>
+        </div>
+        <div class="answer area__answer answer--red">1</div>
+        <div class="answer area__answer answer--blue">2</div>
+        <div class="answer area__answer answer--yellow">3</div>
+    </div>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/mul easy.js"></script>
+</body>
+</html>

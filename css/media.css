@@ -1,0 +1,98 @@
+@media screen and (max-width: 991px) {
+
+    /* header-app */
+
+    .logo__text {
+        font-size: 14px;
+        margin-left: 5px;
+        word-spacing: -9px;
+    }
+
+    .operators__item {
+        margin-right: 10px;
+    }
+
+    .operators__op {
+        font-size: 14px;
+    }
+
+    /* area */
+
+    .equation__reset {
+        top: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* header-app */
+
+    .operators {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        z-index: 20;
+        width: 100%;
+        flex-direction: column;
+        background: var(--red-gradient);
+        padding: 10px;
+        transition: all linear 1s;
+    }
+
+    .operators__item {
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+
+    .operators__op.active::after {
+        height: 2px;
+        bottom: 4px;
+    }
+
+    .operators__list  {
+        text-align: center;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .menu {
+        display: block;
+    }
+
+    /* area */
+
+    .area {
+        grid-template-areas: 
+        "equation equation equation"
+        "equation equation equation"
+        "answer__one answer__two answer__three";
+    }
+
+    .equation,
+    .answer {
+        font-size: 7vw;
+    }
+
+    .equation__reset-img {
+        width: 40px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    /* area */
+
+    .area {
+        margin: 6px;
+        gap: 10px;
+    }
+
+    .equation,
+    .answer {
+        font-size: 7.5vw;
+    }
+
+}
