@@ -50,8 +50,8 @@ const langArray = {
         "en": "Through our approach, students learn while playing, promoting active learning and a growth mindset."
     },
     "advantages__text2" : {
-        "ru": "В приложении несколько типов заданий и уровней — так что у ребенка всегда есть выбор и возможность переключиться на что-то новенькое и более сложное. Приложение может стать для ребенка хорошей тренировкой базовых арифметических навыков.",
-        "en": "The application has several types of tasks and levels - so the child always has a choice and the opportunity to switch to something new and more difficult. The application can be a good training for basic arithmetic skills for a child."
+        "ru": "В приложении несколько типов заданий и уровней — так что у ребенка всегда есть выбор и возможность переключиться на что-то новенькое и более сложное.",
+        "en": "The application has several types of tasks and levels - so the child always has a choice and the opportunity to switch to something new and more difficult."
     },
     "advantages__text3" : {
         "ru": "Наш продукт может помочь миллионам детей получить удовольствие от изучения математики. Мы помогаем всем детям, независимо от возраста, помогая им найти свой путь к изучению математики.",

@@ -238,7 +238,6 @@ body {
 .language__list {
     padding: 7px 15px;
     font-size: 16px;
-    border-radius: 40px;
     outline: none;
     background: var(--red-gradient);
     cursor: pointer;
@@ -307,6 +306,8 @@ body {
 .advantages {
     margin-bottom: 100px;
 }
+
+
 
 .advantages__buttons {
     display: flex;
@@ -452,6 +453,7 @@ body {
     width: 100%;
     border-radius: 40px;
     overflow: hidden;
+    height: 337px;
 }
 
 .reviews__text {
@@ -796,6 +798,10 @@ body {
 
     /* reviews */
 
+    .reviews__img {
+        height: 230px;
+    }
+
     .reviews__content {
         line-height: 24px;
         padding-left: 0px;
@@ -934,6 +940,11 @@ body {
     .reviews__text {
         grid-column: span 4;
     }
+
+    .reviews__img {
+        height: auto;
+    }
+
 
     /* choose */
 

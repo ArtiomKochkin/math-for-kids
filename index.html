@@ -16,6 +16,7 @@
     <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -44,14 +45,16 @@
         <div class="wrapper">
             <section class="intro">
                 <div class="intro__content">
-                    <h1 class="intro__title lang-intro__title">
+                    <h1 class="intro__title lang-intro__title" data-aos="fade-right">
                         Научитесь считать с помощью игры
                     </h1>
-                    <p class="intro__desc lang-intro__desc">
+                    <p class="intro__desc lang-intro__desc" data-aos="fade-right" data-aos-delay="200">
                         Math for kids - это приложение, для обучения детей простым
                         арифметическим операциям
                     </p>
-                    <button class="button-play intro__button button-play--modal lang-intro__button" type="button">Играть</button>
+                    <button class="button-play intro__button button-play--modal lang-intro__button" type="button" data-aos="fade-right" data-aos-delay="400">
+                        Играть
+                    </button>
                 </div>
                 <div class="intro__image-box">
                     <img src="./images/intro/kids.png" alt="" class="intro__img">
@@ -59,13 +62,13 @@
             </section>
 
             <section class="advantages">
-                <h2 class="title advantages__title lang-advantages__title">Наши преимущества</h2>
+                <h2 class="title advantages__title lang-advantages__title" data-aos="fade-up">Наши преимущества</h2>
                 <div class="advantages__buttons">
-                    <button class="advantages__btn active  lang-advantages__btn1" onclick="currentAdvatange(1)">  </button>
-                    <button class="advantages__btn lang-advantages__btn2" onclick="currentAdvatange(2)"> </button>
-                    <button class="advantages__btn lang-advantages__btn3" onclick="currentAdvatange(3)">  </button>
+                    <button class="advantages__btn active  lang-advantages__btn1" onclick="currentAdvatange(1)" data-aos="fade-up">  </button>
+                    <button class="advantages__btn lang-advantages__btn2" onclick="currentAdvatange(2)" data-aos="fade-up" data-aos-delay="100"> </button>
+                    <button class="advantages__btn lang-advantages__btn3" onclick="currentAdvatange(3)" data-aos="fade-up" data-aos-delay="200">  </button>
                 </div>
-                <div class="section-box advantages__box">
+                <div class="section-box advantages__box" data-aos="fade-up">
                     <div class="advantages__items">
                         <div class="advantages__item active">
                             <div class="advantages__content">
@@ -84,8 +87,7 @@
                                 <h3 class="advantages__subtitle lang-advantages__subtitle2">Арифметический тренажер</h3>
                                 <p class="advantages__text lang-advantages__text2">
                                     В приложении несколько типов заданий и уровней — так что у ребенка всегда есть 
-                                    выбор и возможность переключиться на что-то новенькое и более сложное. Приложение может 
-                                    стать для ребенка хорошей тренировкой базовых арифметических навыков.
+                                    выбор и возможность переключиться на что-то новенькое и более сложное. 
                                 </p>
                             </div>
                             <div class="advantages__image-box">
@@ -116,9 +118,9 @@
             </section>
 
             <section class="manual">
-                <h2 class="title manual__title lang-manual__title">Как пользоваться приложением?</h2>
+                <h2 class="title manual__title lang-manual__title" data-aos="fade-up">Как пользоваться приложением?</h2>
                <div class="manual__items">
-                    <div class="manual__item">
+                    <div class="manual__item" data-aos="fade-up">
                         <div class="manual__image-box">
                             <img src="images/svg/interface.svg" alt="" class="manual__img">
                         </div>
@@ -129,7 +131,7 @@
                             ответов на это уравнение.
                         </div>
                     </div>
-                    <div class="manual__item">
+                    <div class="manual__item" data-aos="fade-up" data-aos-delay="100">
                         <div class="manual__image-box">
                             <img src="images/svg/book.svg" alt="" class="manual__img">
                         </div>
@@ -140,7 +142,7 @@
                             вы не запутаетесь в вариантах ответа. Для выбора ответа просто нажмите по нему.
                         </div>
                     </div>
-                    <div class="manual__item">
+                    <div class="manual__item" data-aos="fade-up" data-aos-delay="200">
                         <div class="manual__image-box">
                             <img src="images/svg/settings.svg" alt="" class="manual__img">
                         </div>
@@ -151,7 +153,7 @@
                            до тех пор, пока не будет дан правильный ответ.
                         </div>
                     </div>
-                    <div class="manual__item">
+                    <div class="manual__item" data-aos="fade-up">
                         <div class="manual__image-box">
                             <img src="images/svg/list.svg" alt="" class="manual__img">
                         </div>
@@ -162,7 +164,7 @@
                             звук, сигнализирующий об ошибке.
                         </div>
                     </div>
-                    <div class="manual__item">
+                    <div class="manual__item" data-aos="fade-up" data-aos-delay="100">
                         <div class="manual__image-box">
                             <img src="images/svg/levels.svg" alt="" class="manual__img">
                         </div>
@@ -173,7 +175,7 @@
                              3 больших числа и 2 одинаковых оператора. 
                         </div>
                     </div>
-                    <div class="manual__item">
+                    <div class="manual__item" data-aos="fade-up" data-aos-delay="200">
                         <div class="manual__image-box">
                             <img src="images/svg/episodes.svg" alt="" class="manual__img">
                         </div>
@@ -183,9 +185,9 @@
                             есть все 3 уровня сложности.
                         </div>
                     </div>
-                    <div class="manual__item ">
+                    <div class="manual__item " data-aos="fade-up">
                         <div class="manual__image-box">
-                            <img src="images/svg/reset app.svg.svg" alt="" class="manual__img">
+                            <img src="images/svg/reset app.svg" alt="" class="manual__img">
                         </div>
                         <h3 class="manual__item-title lang-manual__item-title7">Кнопка "Заново"</h3>
                         <div class="manual__text lang-manual__text7">
@@ -193,7 +195,7 @@
                             в правом верхнем углу области уравнения
                         </div>
                     </div>
-                    <div class="manual__item ">
+                    <div class="manual__item " data-aos="fade-up" data-aos-delay="100">
                         <div class="manual__image-box">
                             <img src="images/svg/grab.svg" alt="" class="manual__img">
                         </div>
@@ -204,7 +206,7 @@
                             окна.
                         </div>
                     </div>
-                    <div class="manual__item ">
+                    <div class="manual__item " data-aos="fade-up" data-aos-delay="200">
                         <div class="manual__image-box">
                             <img src="images/svg/home.svg" alt="" class="manual__img">
                         </div>
@@ -219,8 +221,8 @@
             </section>
 
             <section class="reviews">
-                <h2 class="title reviews__title lang-reviews__title">Отзывы пользователей</h2>
-                <div class="section-box reviews__box">
+                <h2 class="title reviews__title lang-reviews__title" data-aos="fade-up">Отзывы пользователей</h2>
+                <div class="section-box reviews__box" data-aos="fade-up">
                     <div class="reviews__items">
                         <div class="reviews__item active">
                             <div class="reviews__image-box">
@@ -257,7 +259,7 @@
                         </div>
                         <div class="reviews__item ">
                             <div class="reviews__image-box">
-                                <img src="./images/reviews/photo3.jpg" alt="" class="reviews__img" >
+                                <img src="./images/reviews/photo3.jpg" alt="" class="reviews__img reviews__img--large" >
                             </div>
                             <div class="reviews__text">
                                 <div class="reviews__content">
@@ -281,24 +283,24 @@
             </section>
 
             <section class="choose">
-                <h2 class="title choose__title lang-choose__title">Хочешь поиграть?</h2>
+                <h2 class="title choose__title lang-choose__title" data-aos="fade-up">Хочешь поиграть?</h2>
                 <div class="choose__content">
                     <div class="choose__item">
-                        <h3 class="choose__subtitle lang-choose__subtitle1">Выбери действие</h3>
+                        <h3 class="choose__subtitle lang-choose__subtitle1" data-aos="fade-right">Выбери действие</h3>
                         <div class="choose__variants" name="action">
-                            <div class="choose__variant">
+                            <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
                                 <input type="radio" class="choose__field" id="add" name="action" value="add">
                                 <label for="add" class="choose__label lang-choose__label1">Сложение</label>
                             </div>
-                            <div class="choose__variant">
+                            <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
                                 <input type="radio" class="choose__field" id="sub" name="action" value="sub">
                                 <label for="sub" class="choose__label lang-choose__label2">Вычитание</label>
                             </div>
-                            <div class="choose__variant">
+                            <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
                                 <input type="radio" class="choose__field" id="mul" name="action" value="mul">
                                 <label for="mul" class="choose__label lang-choose__label3">Умножение</label>
                             </div>
-                            <div class="choose__variant">
+                            <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
                                 <input type="radio" class="choose__field" id="div" name="action" value="div">
                                 <label for="div" class="choose__label lang-choose__label4">Деление</label>
                             </div>
@@ -306,17 +308,17 @@
                     </div>
                     <span class="choose__line"></span>
                     <div class="choose__item">
-                        <h3 class="choose__subtitle lang-choose__subtitle2">Выбери сложность</h3>
+                        <h3 class="choose__subtitle lang-choose__subtitle2" data-aos="fade-right">Выбери сложность</h3>
                         <div class="choose__variants" name="complexity">
-                            <div class="choose__variant">
+                            <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
                                 <input type="radio" class="choose__field" id="easy" name="complexity" value="easy">
                                 <label for="easy" class="choose__label lang-choose__label5">Простой</label>
                             </div>
-                            <div class="choose__variant">
+                            <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
                                 <input type="radio" class="choose__field" id="middle" name="complexity" value="middle">
                                 <label for="middle" class="choose__label lang-choose__label6">Средний</label>
                             </div>
-                            <div class="choose__variant">
+                            <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
                                 <input type="radio" class="choose__field" id="hard" name="complexity" value="hard">
                                 <label for="hard" class="choose__label lang-choose__label7">Сложный</label>
                             </div>
@@ -395,7 +397,7 @@
                 <div class="footer__socials">
                     <a href="https://vk.com/bastard300" class="footer__link" target="_blank">VK</a>
                     <a href="https://www.instagram.com/artiom_kch/" class="footer__link" target="_blank">Instagram</a>
-                    <a href="https://github.com/ArtiomBastard" class="footer__link" target="_blank">GitHub</a>
+                    <a href="https://github.com/ArtiomKochkin" class="footer__link" target="_blank">GitHub</a>
                 </div>
             </div>
             <div class="footer__copyright">
@@ -407,5 +409,33 @@
     </footer>
 <script src="scripts/script.js"></script>
 <script src="scripts/lang.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+
+AOS.init({
+
+  disable: 'phone', 
+  startEvent: 'DOMContentLoaded', 
+  initClassName: 'aos-init', 
+  animatedClassName: 'aos-animate', 
+  useClassNames: false, 
+  disableMutationObserver: false, 
+  debounceDelay: 50, 
+  throttleDelay: 99, 
+  
+
+
+  offset: 100, 
+  delay: 0, 
+  duration: 500, 
+  easing: 'ease', 
+  once: true, 
+  mirror: false, 
+  anchorPlacement: 'top-bottom', 
+
+});
+</script>
 </body>
 </html>
