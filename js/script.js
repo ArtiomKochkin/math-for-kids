@@ -1,70 +1,51 @@
-type TypeListButtons = NodeListOf<HTMLButtonElement>
-type TypeListInputs = NodeListOf<HTMLInputElement>
-type TypeListELements = NodeListOf<HTMLElement>
-
+"use strict";
 /* modal window */
-
-const modalButtons: TypeListButtons = document.querySelectorAll(".button-play--modal");
-const modalWindow = document.getElementById("modal") as HTMLElement;
-
+const modalButtons = document.querySelectorAll(".button-play--modal");
+const modalWindow = document.getElementById("modal");
 modalButtons.forEach((button) => {
     button.addEventListener("click", handleModal);
-
-    function handleModal(): void {
-        let close = document.querySelector(".close") as HTMLElement;
-
+    function handleModal() {
+        let close = document.querySelector(".close");
         modalWindow.classList.add("fixed");
-
         close.onclick = () => {
             modalWindow.classList.remove("fixed");
-        }
-
-        window.onclick = (event: Event) => {
+        };
+        window.onclick = (event) => {
             if (event.target === modalWindow) {
                 modalWindow.classList.remove("fixed");
             }
-        }
+        };
     }
 });
-
-
 /* radio buttons */
-
-const radioAction: TypeListInputs = document.querySelectorAll(".action");
-const radioComplexity: TypeListInputs = document.querySelectorAll(".complexity");
-const chooseButtons: TypeListButtons = document.querySelectorAll(".choose__button");
-
+const radioAction = document.querySelectorAll(".action");
+const radioComplexity = document.querySelectorAll(".complexity");
+const chooseButtons = document.querySelectorAll(".choose__button");
 chooseButtons.forEach(btn => {
     btn.addEventListener("click", handleRadio);
-
-    function handleRadio(): void {
+    function handleRadio() {
         for (let i = 0; i <= radioAction.length; i++) {
             for (let j = 0; j <= radioComplexity.length; j++) {
                 if (radioAction[i].checked && radioComplexity[j].checked) {
-                    let actionValue: string = radioAction[i].value;
-                    let complexityValue: string = radioComplexity[j].value;
+                    let actionValue = radioAction[i].value;
+                    let complexityValue = radioComplexity[j].value;
                     window.location.href = `./${actionValue}-${complexityValue}.html`;
                 }
             }
-        }  
+        }
     }
 });
-
-
 /* sliders */
-
-const advItems: TypeListELements = document.querySelectorAll(".advantages__item");
-const advDots: TypeListELements = document.querySelectorAll(".advantages--dot");
-const advButtons: TypeListButtons = document.querySelectorAll(".advantages__btn");
-const reviewsItems: TypeListELements = document.querySelectorAll(".reviews__item");
-const reviewsDots: TypeListELements = document.querySelectorAll(".reviews--dot");
-let slideIndexAdv: number = 1;
-let slideIndexReviews: number = 1;
-let interval: number | undefined = 0;
-
+const advItems = document.querySelectorAll(".advantages__item");
+const advDots = document.querySelectorAll(".advantages--dot");
+const advButtons = document.querySelectorAll(".advantages__btn");
+const reviewsItems = document.querySelectorAll(".reviews__item");
+const reviewsDots = document.querySelectorAll(".reviews--dot");
+let slideIndexAdv = 1;
+let slideIndexReviews = 1;
+let interval = 0;
 makeSlidesAnimation();
-
-function showSlides(index: number, items: TypeListELements, dots: TypeListELements, buttons?: TypeListButtons): void {
+function showSlides(index, items, dots, buttons) {
     if (index > items.length) {
         index = 1;
     }
@@ -79,30 +60,28 @@ function showSlides(index: number, items: TypeListELements, dots: TypeListELemen
             btn.classList.remove("active");
         }
     }
-
     items[index - 1].classList.add("active");
     dots[index - 1].classList.add("active");
     if (buttons) {
         buttons[index - 1].classList.add("active");
     }
 }
-
-function showCurrentSlide(event: Event, index: number): void {
-    const target = event.target as HTMLElement;
+function showCurrentSlide(event, index) {
+    const target = event.target;
     if (target.classList.contains("reviews--dot")) {
         slideIndexReviews = index;
         showSlides(slideIndexReviews, reviewsItems, reviewsDots);
-    } else {
+    }
+    else {
         slideIndexAdv = index;
         showSlides(slideIndexAdv, advItems, advDots, advButtons);
     }
 }
-
-function makeSlidesAnimation(): void {
+function makeSlidesAnimation() {
     if (!interval) {
         clearInterval(interval);
     }
-    interval = setInterval((): void => {
+    interval = setInterval(() => {
         slideIndexAdv++;
         slideIndexReviews++;
         showSlides(slideIndexAdv, advItems, advDots, advButtons);
