@@ -45,6 +45,10 @@
         margin-bottom: 15px;
     }
 
+    .operators__item:hover .operators__list {
+        display: none;
+    }
+
     .operators__op.active::after {
         height: 2px;
         bottom: 4px;
@@ -56,6 +60,8 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
+    
 
     .menu {
         display: block;

@@ -64,9 +64,9 @@
             <section class="advantages">
                 <h2 class="title advantages__title lang-advantages__title" data-aos="fade-up">Наши преимущества</h2>
                 <div class="advantages__buttons">
-                    <button class="advantages__btn active  lang-advantages__btn1" onclick="currentAdvatange(1)" data-aos="fade-up">  </button>
-                    <button class="advantages__btn lang-advantages__btn2" onclick="currentAdvatange(2)" data-aos="fade-up" data-aos-delay="100"> </button>
-                    <button class="advantages__btn lang-advantages__btn3" onclick="currentAdvatange(3)" data-aos="fade-up" data-aos-delay="200">  </button>
+                    <button class="advantages__btn active  lang-advantages__btn1" onclick="showCurrentSlide(event, 1)" data-aos="fade-up">  </button>
+                    <button class="advantages__btn lang-advantages__btn2" onclick="showCurrentSlide(event, 2)" data-aos="fade-up" data-aos-delay="100"> </button>
+                    <button class="advantages__btn lang-advantages__btn3" onclick="showCurrentSlide(event, 3)" data-aos="fade-up" data-aos-delay="200">  </button>
                 </div>
                 <div class="section-box advantages__box" data-aos="fade-up">
                     <div class="advantages__items">
@@ -110,9 +110,9 @@
                         </div>
                     </div>
                     <div class="dots advantages__dots">
-                        <span class="dot advantages--dot active" onclick="currentAdvatange(1)"></span>
-                        <span class="dot advantages--dot" onclick="currentAdvatange(2)"></span>
-                        <span class="dot advantages--dot" onclick="currentAdvatange(3)"></span>
+                        <span class="dot advantages--dot active" onclick="showCurrentSlide(event, 1)"></span>
+                        <span class="dot advantages--dot" onclick="showCurrentSlide(event, 2)"></span>
+                        <span class="dot advantages--dot" onclick="showCurrentSlide(event, 3)"></span>
                     </div>
                 </div>
             </section>
@@ -275,9 +275,9 @@
                         </div>
                     </div>
                     <div class="dots reviews--dots">
-                        <span class="dot reviews--dot active" onclick="currentReviews(1)"></span>
-                        <span class="dot reviews--dot" onclick="currentReviews(2)"></span>
-                        <span class="dot reviews--dot" onclick="currentReviews(3)"></span>
+                        <span class="dot reviews--dot active" onclick="showCurrentSlide(event, 1)"></span>
+                        <span class="dot reviews--dot" onclick="showCurrentSlide(event, 2)"></span>
+                        <span class="dot reviews--dot" onclick="showCurrentSlide(event, 3)"></span>
                     </div>
                 </div>
             </section>
@@ -287,21 +287,21 @@
                 <div class="choose__content">
                     <div class="choose__item">
                         <h3 class="choose__subtitle lang-choose__subtitle1" data-aos="fade-right">Выбери действие</h3>
-                        <div class="choose__variants" name="action">
+                        <div class="choose__variants">
                             <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
-                                <input type="radio" class="choose__field" id="add" name="action" value="add">
+                                <input type="radio"class="choose__field action" name="action1" id="add" value="add">
                                 <label for="add" class="choose__label lang-choose__label1">Сложение</label>
                             </div>
                             <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
-                                <input type="radio" class="choose__field" id="sub" name="action" value="sub">
+                                <input type="radio"class="choose__field action" name="action1" id="sub"  value="sub">
                                 <label for="sub" class="choose__label lang-choose__label2">Вычитание</label>
                             </div>
                             <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
-                                <input type="radio" class="choose__field" id="mul" name="action" value="mul">
+                                <input type="radio"class="choose__field action" name="action1" id="mul"  value="mul">
                                 <label for="mul" class="choose__label lang-choose__label3">Умножение</label>
                             </div>
                             <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
-                                <input type="radio" class="choose__field" id="div" name="action" value="div">
+                                <input type="radio"class="choose__field action" name="action1" id="div"  value="div">
                                 <label for="div" class="choose__label lang-choose__label4">Деление</label>
                             </div>
                         </div>
@@ -309,17 +309,17 @@
                     <span class="choose__line"></span>
                     <div class="choose__item">
                         <h3 class="choose__subtitle lang-choose__subtitle2" data-aos="fade-right">Выбери сложность</h3>
-                        <div class="choose__variants" name="complexity">
+                        <div class="choose__variants">
                             <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
-                                <input type="radio" class="choose__field" id="easy" name="complexity" value="easy">
+                                <input type="radio" class="choose__field complexity" name="complexity1" id="easy"  value="easy">
                                 <label for="easy" class="choose__label lang-choose__label5">Простой</label>
                             </div>
                             <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
-                                <input type="radio" class="choose__field" id="middle" name="complexity" value="middle">
+                                <input type="radio" class="choose__field complexity" name="complexity1" id="middle"  value="middle">
                                 <label for="middle" class="choose__label lang-choose__label6">Средний</label>
                             </div>
                             <div class="choose__variant" data-aos="fade-left" data-aos-delay="100">
-                                <input type="radio" class="choose__field" id="hard" name="complexity" value="hard">
+                                <input type="radio" class="choose__field complexity" name="complexity1" id="hard"  value="hard">
                                 <label for="hard" class="choose__label lang-choose__label7">Сложный</label>
                             </div>
                         </div>
@@ -340,19 +340,19 @@
                             <h3 class="choose__subtitle choose__subtitle--modal  lang-choose__subtitle--modal1">Выбери действие</h3>
                             <div class="choose__variants choose__variants--modal">
                                 <div class="choose__variant">
-                                    <input type="radio" class="choose__field" id="add2" name="action" value="add">
+                                    <input type="radio"class="choose__field action" name="action2" id="add2" value="add">
                                     <label for="add2" class="choose__label lang-choose__label--modal1">Сложение</label>
                                 </div>
                                 <div class="choose__variant">
-                                    <input type="radio" class="choose__field" id="sub2" name="action" value="sub">
+                                    <input type="radio"class="choose__field action" name="action2" id="sub2"  value="sub">
                                     <label for="sub2" class="choose__label lang-choose__label--modal2">Вычитание</label>
                                 </div>
                                 <div class="choose__variant">
-                                    <input type="radio" class="choose__field" id="mul2" name="action" value="mul">
+                                    <input type="radio"class="choose__field action" name="action2" id="mul2"  value="mul">
                                     <label for="mul2" class="choose__label lang-choose__label--modal3">Умножение</label>
                                 </div>
                                 <div class="choose__variant">
-                                    <input type="radio" class="choose__field" id="div2" name="action" value="div">
+                                    <input type="radio"class="choose__field action" name="action2" id="div2"  value="div">
                                     <label for="div2" class="choose__label lang-choose__label--modal4">Деление</label>
                                 </div>
                             </div>
@@ -362,15 +362,15 @@
                             <h3 class="choose__subtitle choose__subtitle--modal  lang-choose__subtitle--modal2">Выбери сложность</h3>
                             <div class="choose__variants choose__variants--modal">
                                 <div class="choose__variant">
-                                    <input type="radio" class="choose__field" id="easy2" name="complexity" value="easy">
+                                    <input type="radio" class="choose__field complexity" name="complexity2" id="easy2"  value="easy">
                                     <label for="easy2" class="choose__label lang-choose__label--modal5">Простой</label>
                                 </div>
                                 <div class="choose__variant">
-                                    <input type="radio" class="choose__field" id="middle2" name="complexity" value="middle">
+                                    <input type="radio" class="choose__field complexity" name="complexity2" id="middle2"  value="middle">
                                     <label for="middle2" class="choose__label lang-choose__label--modal6">Средний</label>
                                 </div>
                                 <div class="choose__variant">
-                                    <input type="radio" class="choose__field" id="hard2" name="complexity" value="hard">
+                                    <input type="radio" class="choose__field complexity" name="complexity2" id="hard2"  value="hard">
                                     <label for="hard2" class="choose__label lang-choose__label--modal7">Сложный</label>
                                 </div>
                             </div>
@@ -407,8 +407,8 @@
             </div>
         </div>
     </footer>
-<script src="scripts/script.js"></script>
-<script src="scripts/lang.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/lang.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();

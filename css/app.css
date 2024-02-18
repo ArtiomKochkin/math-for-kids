@@ -80,7 +80,7 @@
 }
 
 .operators__list.active {
-    display: flex;
+    display: flex !important;
 }
 
 .operators__link {
